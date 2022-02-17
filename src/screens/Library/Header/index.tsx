@@ -16,7 +16,7 @@ import TypeSelector from './TypeSelector';
 import { styles } from './styles';
 
 export default function LibraryScreenHeader({
-  insets: { top, left, right },
+  // insets: { top, left, right },
   navigation,
   scene: { route },
 }: StackHeaderProps & {
@@ -46,7 +46,7 @@ export default function LibraryScreenHeader({
             style={styles.headerTitle}
             onPress={() => setTypeSelectVisible(!typeSelectVisible)}>
             <StyledText color="light" size="default" bold>
-              {t(`Header.${type}`)}
+              {(`Header.${type}`)}
             </StyledText>
             <Ionicons
               name="chevron-down-outline"

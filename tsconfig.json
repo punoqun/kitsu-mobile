@@ -2,7 +2,10 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "jsx": "react-native",
-    "lib": ["dom", "esnext"],
+    "lib": [
+      "dom",
+      "esnext"
+    ],
     "target": "ES2019",
     "module": "CommonJS",
     "moduleResolution": "node",
@@ -12,8 +15,14 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "app/*": ["./src/*"]
+      "app/*": [
+        "./src/*"
+      ]
     },
-    "typeRoots": ["./node_modules/@types", "./custom_typings"]
-  }
+    "typeRoots": [
+      "./node_modules/@types",
+      "./custom_typings"
+    ]
+  },
+  "extends": "expo/tsconfig.base"
 }

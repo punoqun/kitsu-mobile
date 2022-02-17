@@ -32,7 +32,7 @@ export default function RegistrationScreen({
               marginLeft: 16,
               marginBottom: 4,
             }}
-          />
+           onFailure={error => URIError}/> //TODO: probs bad
           <Facebook />
           <Button
             kind="outline"

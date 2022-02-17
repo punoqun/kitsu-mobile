@@ -45,7 +45,7 @@ export default function LibraryTypeSelector({
         color="light"
         bold={currentType === type}
         style={styles.typeText}>
-        {t(type)}
+        {(type)}
       </StyledText>
     </RectButton>
   );

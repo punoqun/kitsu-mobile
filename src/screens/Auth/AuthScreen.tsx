@@ -108,7 +108,7 @@ export default function AuthScreen({
                 autoCorrect={false}
                 value={email}
                 keyboardType="email-address"
-                autoCompleteType="email"
+                autoComplete="email"
                 onChangeText={(text) => setEmail(text)}
                 returnKeyType="next"
                 onSubmitEditing={() => afterEmail.current?.focus()}
@@ -123,7 +123,6 @@ export default function AuthScreen({
                 <Input
                   placeholder="Username"
                   autoCapitalize="words"
-                  autoCompleteType="username"
                   value={username}
                   onChangeText={(text) => setUsername(text)}
                   returnKeyType="next"
@@ -139,7 +138,7 @@ export default function AuthScreen({
                 returnKeyType={tab === 'sign-up' ? 'next' : 'done'}
                 onSubmitEditing={() => afterPassword?.current?.focus()}
                 ref={passwordInput}
-                blurOnSubmit={tab === 'sign-up' ? false : true}
+                blurOnSubmit={tab !== 'sign-up'}
               />
               <Animated.View
                 style={{

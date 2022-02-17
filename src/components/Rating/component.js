@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
-import { Modal, Slider, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Modal, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Slider } from '@react-native-community/slider';
 import FastImage from 'react-native-fast-image';
 import PropTypes from 'prop-types';
 import Icon from 'react-native-vector-icons/FontAwesome';

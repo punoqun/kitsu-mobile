@@ -3,7 +3,7 @@ import { View, TextInput, TextStyle, ViewStyle } from 'react-native';
 import * as colors from 'app/constants/colors';
 import { styles } from './styles';
 
-const Input: React.RefForwardingComponent<
+const Input: React.ForwardRefRenderFunction<
   TextInput,
   {
     style?: TextStyle;

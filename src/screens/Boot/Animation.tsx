@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { Easing, Animated, useWindowDimensions } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import LottieView from 'lottie-react-native';
-import AsyncStorage from '@react-native-community/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import logoAnimation from 'app/assets/animation/splash/full.json';
 import Overlay from 'app/components/overlay';

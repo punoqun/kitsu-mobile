@@ -12,6 +12,7 @@ import * as SessionStore from 'app/utils/session-store';
 /**
  * Wraps the auth components which provide
  * @param  {[type]} WrappedComponent [description]
+ * @param provider
  * @return {[type]}                  [description]
  */
 export default function connectAssertionLogin(
@@ -38,7 +39,7 @@ export default function connectAssertionLogin(
           setSession(session);
           // TODO: navigate to app screen
           setPending(false);
-          navigation.navigate('ProfileDrawer');
+          navigation.navigate("ProfileDrawer");
         }}
         onFailure={(error) => {
           setPending(false);

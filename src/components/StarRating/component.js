@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Slider, Text } from 'react-native';
+import { View, Text } from 'react-native';
+import { Slider } from '@react-native-community/slider';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import * as colors from 'app/constants/colors';
 import { styles } from './styles';

@@ -13,6 +13,7 @@ export const linkBlue = '#083d8d'; // sidebar seemore text
 
 /* purples */
 export const extraDarkPurple = '#372836';
+export const listBackPurple = '#372836'; //TODO: fix value
 export const darkPurple = '#402F3F';
 export const purple = '#443443';
 export const lightPurple = '#624E5F';

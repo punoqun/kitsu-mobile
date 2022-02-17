@@ -1,4 +1,5 @@
 import * as Sentry from 'sentry-expo';
+import * as SentryBrowser from "@sentry/browser";
 import type { Chalk } from 'chalk';
 
 // Get chalk asynchronously to avoid loading in production
@@ -24,9 +25,9 @@ export function log(message: string, data?: {}) {
   if (__DEV__) {
     console.log(chalk`{grey.bold [LOG]} ${message}`, ...maybe(data));
   } else {
-    Sentry.addBreadcrumb({
+    SentryBrowser.addBreadcrumb({
       category: 'log',
-      level: Sentry.Severity.Log,
+      level: SentryBrowser.Severity.Log,
       message,
       data,
     });
@@ -37,9 +38,9 @@ export function info(message: string, data?: {}) {
   if (__DEV__) {
     console.info(chalk`{blueBright.bold [INFO]} ${message}`, ...maybe(data));
   } else {
-    Sentry.addBreadcrumb({
+    SentryBrowser.addBreadcrumb({
       category: 'log',
-      level: Sentry.Severity.Info,
+      level: SentryBrowser.Severity.Info,
       message,
       data,
     });
@@ -50,9 +51,9 @@ export function debug(message: string, data?: {}) {
   if (__DEV__) {
     console.debug(chalk`{green.bold [DEBUG]} ${message}`, ...maybe(data));
   } else {
-    Sentry.addBreadcrumb({
+    SentryBrowser.addBreadcrumb({
       category: 'log',
-      level: Sentry.Severity.Debug,
+      level: SentryBrowser.Severity.Debug,
       message,
       data,
     });
@@ -63,14 +64,14 @@ export function warn(message: string, data?: {}) {
   if (__DEV__) {
     console.debug(chalk`{yellow.bold [WARN]} ${message}`, ...maybe(data));
   } else {
-    Sentry.addBreadcrumb({
+    SentryBrowser.addBreadcrumb({
       category: 'log',
-      level: Sentry.Severity.Warning,
+      level: SentryBrowser.Severity.Warning,
       message,
       data,
     });
-    Sentry.captureMessage(message, {
-      level: Sentry.Severity.Warning,
+    SentryBrowser.captureMessage(message, {
+      level: SentryBrowser.Severity.Warning,
       ...data,
     });
   }
@@ -81,9 +82,9 @@ export function error(message: string | Error, data?: {}) {
     console.debug(chalk`{red.bold [ERROR]} ${message}`, ...maybe(data));
   } else {
     if (typeof message === 'string') {
-      Sentry.captureMessage(message, data);
+      SentryBrowser.captureMessage(message, data);
     } else {
-      Sentry.captureException(message, data);
+      SentryBrowser.captureException(message, data);
     }
   }
 }

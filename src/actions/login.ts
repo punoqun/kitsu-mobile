@@ -11,6 +11,7 @@ export default async function login({
   params?: {};
   init?: RequestInit;
 }): Promise<NonNullable<Session>> {
+  // @ts-ignore
   const host = Constants.manifest.extra.kitsu.host;
   const body = new URLSearchParams(params);
   const response = await fetch(`${host}api/oauth/token`, {

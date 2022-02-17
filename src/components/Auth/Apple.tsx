@@ -81,7 +81,7 @@ export default function AppleAuthButton({
                   ? `${fullName?.givenName} ${fullName?.familyName}`
                   : undefined,
             });
-          } catch (e) {
+          } catch (e: typeof error) {
             if (e.code === 'ERR_CANCELED') {
               onFailure(new LoginCancelled());
             } else {

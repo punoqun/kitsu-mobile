@@ -9,8 +9,8 @@ import {
   orange,
   red,
   green,
-  black,
-} from 'app/constants/colors';
+  black, darkPurple
+} from "app/constants/colors";
 import { OpenSans } from 'app/constants/fonts';
 import { ViewMoreText } from 'app/components/ViewMoreText';
 

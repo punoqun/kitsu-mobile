@@ -14,7 +14,7 @@ enableScreens();
 logInit();
 
 export default function App() {
-  const navigationRef = useRef<NavigationContainerRef>(null);
+  const navigationRef = useRef<NavigationContainerRef<any>>(null);
   const routeRef = useRef<Route<string>>();
 
   return (

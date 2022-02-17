@@ -4,7 +4,7 @@ import { isString } from 'lodash';
 
 export default function useScopedTranslation(
   scope: string | string[]
-): UseTranslationResponse {
+): UseTranslationResponse<any> {
   const prefix = isString(scope) ? scope : scope.join('.');
   const i18n = useTranslation();
 

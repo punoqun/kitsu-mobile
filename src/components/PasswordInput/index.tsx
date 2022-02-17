@@ -4,7 +4,7 @@ import { FontAwesome as Icon } from '@expo/vector-icons';
 import Input from 'app/components/Input';
 import { styles } from './styles';
 
-const PasswordInput: React.RefForwardingComponent<
+const PasswordInput: React.ForwardRefRenderFunction<
   TextInput,
   React.ComponentProps<typeof Input>
 > = function PasswordInput(props, ref) {
@@ -18,7 +18,6 @@ const PasswordInput: React.RefForwardingComponent<
         ref={ref}
         secureTextEntry={!visible}
         autoCapitalize="none"
-        autoCompleteType="password"
       />
       <TouchableOpacity
         hitSlop={{ left: 20 }}

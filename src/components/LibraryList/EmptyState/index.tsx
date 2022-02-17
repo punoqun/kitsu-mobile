@@ -20,6 +20,7 @@ export default function LibraryEmptyState({
 }) {
   const { t } = useScopedTranslation('LibraryList.EmptyState');
 
+  // @ts-ignore
   return (
     <ScrollView>
       <View style={styles.container}>

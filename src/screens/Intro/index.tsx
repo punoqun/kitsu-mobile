@@ -7,7 +7,7 @@ import {
   useWindowDimensions,
   Platform,
 } from 'react-native';
-import { useSafeArea } from 'react-native-safe-area-context';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { StackNavigationProp } from '@react-navigation/stack';
 
 import logo from 'app/assets/img/intro/slidelogo.png';
@@ -23,7 +23,7 @@ export default function IntroScreen({
 }: {
   navigation: StackNavigationProp<IntroNavigatorParamList, 'Intro'>;
 }) {
-  const insets = useSafeArea();
+  const insets = useSafeAreaInsets();
   const { width: windowWidth } = useWindowDimensions();
   const scrollView = useRef(null);
 
